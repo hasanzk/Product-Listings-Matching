@@ -132,12 +132,15 @@ public class ProductListingsMatching {
 		} catch (FileNotFoundException e) {
 			JOptionPane.showMessageDialog(null, "Can't access " + file_name + " source file", "Error", JOptionPane.ERROR_MESSAGE);
 			e.printStackTrace();
+			System.exit(-1);
 		} catch (IOException e) {
 			JOptionPane.showMessageDialog(null, "Can't read from " + file_name + " source file", "Error", JOptionPane.ERROR_MESSAGE);
 			e.printStackTrace();
+			System.exit(-1);
 		} catch (EmptyAttributeException e) {
 			JOptionPane.showMessageDialog(null, "Can't load " + file_name, "Error", JOptionPane.ERROR_MESSAGE);
 			e.printStackTrace();
+			System.exit(-1);
 		}
 	}
 	
@@ -175,6 +178,7 @@ public class ProductListingsMatching {
 		} catch (EmptyAttributeException e) {
 			JOptionPane.showMessageDialog(null, "Can't create result", "Error", JOptionPane.ERROR_MESSAGE);
 			e.printStackTrace();
+			System.exit(-1);
 		}
 	}
 	
@@ -191,6 +195,7 @@ public class ProductListingsMatching {
 		} catch (IOException e) {
 			JOptionPane.showMessageDialog(null, "Can't write to the output file", "Error", JOptionPane.ERROR_MESSAGE);
 			e.printStackTrace();
+			System.exit(-1);
 		}
 	}
 	
