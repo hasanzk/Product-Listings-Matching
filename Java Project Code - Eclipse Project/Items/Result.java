@@ -35,9 +35,10 @@ public class Result {
 	 */
 	public String toString(){
 		listings.trimToSize();
-		String output = "{\"product_name\": \"" + product_name + "\",\"listings\":[";
-		for(int i = 0; i < listings.size(); i++) output += listings.get(i).toString();
-		output += "]}";
+		String output = "{\"listings\": [";
+		for(int i = 0; i < listings.size() - 1; i++) output += listings.get(i).toString() + " ,";
+		if(!listings.isEmpty()) output += listings.get(listings.size() - 1).toString();
+		output += "], \"product_name\": \"" + product_name + "\"}";
 		return output;
 	}
 	

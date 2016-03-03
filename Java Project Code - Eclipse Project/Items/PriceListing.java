@@ -32,7 +32,7 @@ public class PriceListing {
 	 *  This method returns a string of the product information
 	 */
 	public String toString(){
-		return "[\"" + title + "\", \"" + manufacturer + "\", \"" + currency + "\", \"" + price + "\"]";
+		return "{\"currency\": \"" + currency + "\", \"price\": \"" + price + "\", \"manufacturer\": \"" + manufacturer + "\", \"title\": \"" + title + "\"}";
 	}
 	
 	/**
