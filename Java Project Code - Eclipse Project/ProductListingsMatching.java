@@ -14,8 +14,8 @@ import Items.Result;
 
 /**
  * @author	:	Hasan Al-Khabbaz
- * @Date	: 	03/02/2016
- * @version	:	1.0.0
+ * @Date	: 	09/03/2016
+ * @version	:	1.0.2
  */
 
 public class ProductListingsMatching {
@@ -104,7 +104,6 @@ public class ProductListingsMatching {
 					while(buffer != '"'){													// detecting the end of attribute value
 						if(buffer == '\\')													// detecting the escaping \ character
 							attribute_value[attribute_index] += buffer + (char) source_file.read(); // loading escaped " character
-						else if(buffer == '_') attribute_value[attribute_index] += ' ';		// replacing _ character by space character
 						else attribute_value[attribute_index] += buffer;					// adding the character to the attribute value
 						buffer = (char) source_file.read();
 					}
